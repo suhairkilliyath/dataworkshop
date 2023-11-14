@@ -1,8 +1,22 @@
+#card-container {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0; /* Start with an invisible card */
+}
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+/* When a new card is displayed, it fades in */
+.show-card {
+    opacity: 1;
 }
-.story-section, .task-section {
-    margin-bottom: 20px;
+
+#card-image {
+    /* Style your image container */
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    background-size: cover;
+    background-position: center;
 }
+
+#card-text {
+    /* Style for the text content */
+}
+
