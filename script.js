@@ -75,6 +75,13 @@ document.getElementById('prev-btn').addEventListener('click', async () => {
     }
 });
 
+document.getElementById('erase-btn').addEventListener('click', () => {
+    const cells = document.querySelectorAll('#input-table td');
+    cells.forEach(cell => {
+        cell.innerText = ''; // Clear the text in each cell
+    });
+});
+
 displayCard(0).then(() => {
     document.getElementById('card-container').classList.add('show-card');
 });
