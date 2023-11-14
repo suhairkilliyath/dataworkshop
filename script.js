@@ -73,7 +73,7 @@ function replaceTablePlaceholder(text, index) {
 }
 
 function getTableHtml() {
-    let tableHtml = '<table id="input-table">
+    let tableHtml = `<table id="input-table">
         <tr>
             <th>Teachers</th>
             <th>Parents</th>
@@ -118,13 +118,13 @@ function getTableHtml() {
             <td contenteditable="true"></td>
             <td contenteditable="true"></td>
         </tr>
-        </table>';
+        </table>`;
     tableHtml += '<button id="erase-btn">Clear Table</button>';
     return tableHtml;
 }
 
 function addClearButtonListener() {
-    const clearButton = document.getElementById('clear-table');
+    const clearButton = document.getElementById('erase-btn');
     if (clearButton) {
         clearButton.addEventListener('click', function() {
             const cells = document.querySelectorAll('#input-table td[contenteditable="true"]');
