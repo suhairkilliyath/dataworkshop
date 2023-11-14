@@ -74,51 +74,51 @@ function replaceTablePlaceholder(text, index) {
 
 function getTableHtml() {
     let tableHtml = '<table id="input-table">
-<tr>
-    <th>Teachers</th>
-    <th>Parents</th>
-</tr>
-<tr>
-    <td contenteditable="true"></td>
-    <td contenteditable="true"></td>
-</tr>
-<tr>
-    <td contenteditable="true"></td>
-    <td contenteditable="true"></td>
-</tr>
-<tr>
-    <td contenteditable="true"></td>
-    <td contenteditable="true"></td>
-</tr>
-<tr>
-    <td contenteditable="true"></td>
-    <td contenteditable="true"></td>
-</tr>
-<tr>
-    <td contenteditable="true"></td>
-    <td contenteditable="true"></td>
-</tr>
-<tr>
-    <td contenteditable="true"></td>
-    <td contenteditable="true"></td>
-</tr>
-<tr>
-    <td contenteditable="true"></td>
-    <td contenteditable="true"></td>
-</tr>
-<tr>
-    <td contenteditable="true"></td>
-    <td contenteditable="true"></td>
-</tr>
-<tr>
-    <td contenteditable="true"></td>
-    <td contenteditable="true"></td>
-</tr>
-<tr>
-    <td contenteditable="true"></td>
-    <td contenteditable="true"></td>
-</tr>
-</table>';
+        <tr>
+            <th>Teachers</th>
+            <th>Parents</th>
+        </tr>
+        <tr>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+        </tr>
+        <tr>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+        </tr>
+        <tr>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+        </tr>
+        <tr>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+        </tr>
+        <tr>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+        </tr>
+        <tr>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+        </tr>
+        <tr>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+        </tr>
+        <tr>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+        </tr>
+        <tr>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+        </tr>
+        <tr>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+        </tr>
+        </table>';
     tableHtml += '<button id="erase-btn">Clear Table</button>';
     return tableHtml;
 }
