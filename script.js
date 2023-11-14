@@ -62,7 +62,7 @@ async function displayCard(index) {
 let currentCardIndex = 0;
 
 document.getElementById('next-btn').addEventListener('click', async () => {
-    if (currentCardIndex < storyUrls.length - 1) {
+    if (currentCardIndex < storyContent.length - 1) {
         currentCardIndex++;
         await displayCard(currentCardIndex);
     }
