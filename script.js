@@ -2,7 +2,6 @@ const storyUrls = [
     './TeacherParentStory/StoryNav1.txt',
     './TeacherParentStory/StoryNav2.txt',
     './TeacherParentStory/StoryNav3.txt',
-    './TeacherParentStory/StoryNav4.txt',
     './TeacherParentStory/Task1.txt',
     // ... other file paths
 ];
