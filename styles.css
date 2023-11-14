@@ -1,7 +1,23 @@
-#card-container {
-    transition: opacity 0.5s ease-in-out;
-    opacity: 1; /* Start with an invisible card */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Reset default margin */
 }
+
+
+#card-container {
+    max-width: 600px; /* Adjust as needed */
+    margin: 20px;
+    width: 100%; /* Make it responsive */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds shadow for depth */
+    border-radius: 10px; /* Optional: Rounds the corners */
+    padding: 20px; /* Adjust as needed */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+}
+
 
 /* When a new card is displayed, it fades in */
 .show-card {
@@ -9,15 +25,27 @@
 }
 
 #card-image {
-    /* Style your image container */
-    width: 100%;
-    height: 200px; /* Adjust as needed */
-    background-size: cover;
+    background-size: cover; /* or 'contain' based on your preference */
     background-position: center;
+    background-repeat: no-repeat;
 }
 
+
 #card-text {
+    font-family: 'Roboto', sans-serif; /* Or any other font */
     color: black; /* Or any visible color */
     font-size: 16px; /* Adjust as needed */
+    line-height: 1.6; 
+    padding: 15px;
+    margin-top: 10px; /* Space between image and text */
+    text-align: left; /* Or 'center' */
+    border-top: 1px solid #ddd; /* A subtle border */
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+}
+
+@media (max-width: 600px) {
+    #card-text {
+        font-size: 14px;
+    }
 }
 
