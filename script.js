@@ -1,19 +1,19 @@
 const storyContent = [
     {
         text: './TeacherParentStory/StoryNav1.txt',
-        image: './path-to-image/story1.jpg'
+        image: './TeacherParentStory/StoryImage1.jpg'
     },
     {
         text: './TeacherParentStory/StoryNav2.txt',
-        image: './path-to-image/story2.jpg'
+        image: './TeacherParentStory/StoryImage2.jpg'
     },
     {
         text: './TeacherParentStory/StoryNav3.txt',
-        image: './path-to-image/story3.jpg'
+        image: './TeacherParentStory/StoryImage3.jpg'
     },
     {
         text: './TeacherParentStory/Task1.txt',
-        image: './path-to-image/Task1.jpg'
+        image: './TeacherParentStory/TaskImage1.jpg'
     },
     // ... other content
 ];
