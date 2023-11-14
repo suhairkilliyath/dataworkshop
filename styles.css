@@ -17,6 +17,7 @@
 }
 
 #card-text {
-    /* Style for the text content */
+    color: black; /* Or any visible color */
+    font-size: 16px; /* Adjust as needed */
 }
 
