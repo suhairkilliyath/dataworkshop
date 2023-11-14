@@ -13,9 +13,23 @@ async function fetchStoryContent(index) {
 }
 
 async function displayCard(index) {
-    const content = await fetchStoryContent(index);
     const cardContainer = document.getElementById('card-container');
-    cardContainer.innerHTML = content; // Display the fetched content
+    const cardImage = document.getElementById('card-image');
+    const cardText = document.getElementById('card-text');
+
+    // Fade out the current content
+    cardContainer.classList.remove('show-card');
+
+    // Wait for the fade-out transition
+    await new Promise(resolve => setTimeout(resolve, 500));
+
+    // Update the content
+    const textContent = await fetchStoryContent(storyContent[index].text);
+    cardText.innerHTML = textContent;
+    cardImage.style.backgroundImage = `url('${storyContent[index].image}')`;
+
+    // Fade in the new content
+    cardContainer.classList.add('show-card');
 }
 
 let currentCardIndex = 0;
@@ -34,4 +48,6 @@ document.getElementById('prev-btn').addEventListener('click', async () => {
     }
 });
 
-displayCard(0);
+displayCard(0).then(() => {
+    document.getElementById('card-container').classList.add('show-card');
+});
