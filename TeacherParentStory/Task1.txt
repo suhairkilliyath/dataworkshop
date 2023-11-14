@@ -1,1 +1,25 @@
-Ramesh handed him a sheet, "Write down any information you believe would be beneficial for parents and teachers. Think about how this data might empower us to understand our children's academic journey better."
+<p>Ramesh handed him a sheet, "Write down any information you believe would be beneficial for parents and teachers. Think about how this data might empower us to understand our children's academic journey better."</p>
+<h3>Task: Provide Your Input</h3>
+<table id="input-table">
+<tr>
+    <th>Teachers</th>
+    <th>Parents</th>
+</tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+</tr>
+<!-- ... -->
+</table>
+
+<button id="erase-btn">Erase Data</button>
