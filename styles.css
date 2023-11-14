@@ -8,6 +8,9 @@ body {
 
 
 #card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 600px; /* Adjust as needed */
     margin: 20px;
     width: 100%; /* Make it responsive */
@@ -25,13 +28,17 @@ body {
 }
 
 #card-image {
+    width: 50%; /* Adjust the width as needed */
+    height: auto; /* Adjust the height as needed */
     background-size: cover; /* or 'contain' based on your preference */
     background-position: center;
     background-repeat: no-repeat;
+    height: 200px; /* or any fixed height */
 }
 
 
 #card-text {
+    width: 50%;
     font-family: 'Roboto', sans-serif; /* Or any other font */
     color: black; /* Or any visible color */
     font-size: 16px; /* Adjust as needed */
@@ -41,11 +48,16 @@ body {
     text-align: left; /* Or 'center' */
     border-top: 1px solid #ddd; /* A subtle border */
     border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+    overflow: auto;
 }
 
 @media (max-width: 600px) {
-    #card-text {
-        font-size: 14px;
+    #card-container {
+        flex-direction: column;
+    }
+
+    #card-image, #card-text {
+        width: 100%;
     }
 }
 
