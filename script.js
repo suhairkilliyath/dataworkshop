@@ -119,7 +119,7 @@ function getTableHtml() {
     <td contenteditable="true"></td>
 </tr>
 </table>';
-    tableHtml += '<button id="clear-table">Clear Table</button>';
+    tableHtml += '<button id="erase-btn">Clear Table</button>';
     return tableHtml;
 }
 
