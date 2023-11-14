@@ -1,16 +1,43 @@
-const storyUrls = [
-    './TeacherParentStory/StoryNav1.txt',
-    './TeacherParentStory/StoryNav2.txt',
-    './TeacherParentStory/StoryNav3.txt',
-    './TeacherParentStory/Task1.txt',
-    // ... other file paths
+const storyContent = [
+    {
+        text: './TeacherParentStory/StoryNav1.txt',
+        image: './path-to-image/story1.jpg'
+    },
+    {
+        text: './TeacherParentStory/StoryNav2.txt',
+        image: './path-to-image/story2.jpg'
+    },
+    {
+        text: './TeacherParentStory/StoryNav3.txt',
+        image: './path-to-image/story3.jpg'
+    },
+    {
+        text: './TeacherParentStory/Task1.txt',
+        image: './path-to-image/Task1.jpg'
+    },
+    // ... other content
 ];
 
-async function fetchStoryContent(index) {
-    const response = await fetch(storyUrls[index]);
-    const content = await response.text();
-    return content;
+async function fetchStoryContent(story) {
+    try {
+        const response = await fetch(story.text);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const textContent = await response.text();
+        return {
+            text: textContent,
+            image: story.image
+        };
+    } catch (error) {
+        console.error('Fetch error:', error);
+        return {
+            text: "Content could not be loaded.",
+            image: story.image
+        };
+    }
 }
+
 
 async function displayCard(index) {
     const cardContainer = document.getElementById('card-container');
@@ -24,9 +51,9 @@ async function displayCard(index) {
     await new Promise(resolve => setTimeout(resolve, 500));
 
     // Update the content
-    const textContent = await fetchStoryContent(storyContent[index].text);
-    cardText.innerHTML = textContent;
-    cardImage.style.backgroundImage = `url('${storyContent[index].image}')`;
+    const content = await fetchStoryContent(storyContent[index]);
+    cardText.innerHTML = content.text;
+    cardImage.style.backgroundImage = `url('${content.image}')`;
 
     // Fade in the new content
     cardContainer.classList.add('show-card');
