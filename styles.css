@@ -51,6 +51,22 @@ body {
     overflow: auto;
 }
 
+#input-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#input-table th, #input-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#input-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
 @media (max-width: 600px) {
     #card-container {
         flex-direction: column;
