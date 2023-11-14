@@ -38,7 +38,6 @@ async function fetchStoryContent(story) {
     }
 }
 
-
 async function displayCard(index) {
     const cardContainer = document.getElementById('card-container');
     const cardImage = document.getElementById('card-image');
@@ -51,13 +50,66 @@ async function displayCard(index) {
     await new Promise(resolve => setTimeout(resolve, 500));
 
     // Update the content
-    const content = await fetchStoryContent(storyContent[index]);
+    let content = await fetchStoryContent(storyContent[index]);
+    content.text = replaceTablePlaceholder(content.text, index);
+
     cardText.innerHTML = content.text;
     cardImage.style.backgroundImage = `url('${content.image}')`;
+
+    // Add clear table event listener if the table exists
+    addClearButtonListener();
 
     // Fade in the new content
     cardContainer.classList.add('show-card');
 }
+
+function replaceTablePlaceholder(text, index) {
+    // Check if it's the task page and has the placeholder
+    if (index === storyContent.length - 1 && text.includes('[PLACEHOLDER_FOR_TABLE]')) {
+        const tableHtml = getTableHtml();
+        text = text.replace('[PLACEHOLDER_FOR_TABLE]', tableHtml);
+    }
+    return text;
+}
+
+function getTableHtml() {
+    let tableHtml = '<table id="input-table">
+<tr>
+    <th>Teachers</th>
+    <th>Parents</th>
+</tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+</tr>
+<tr>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+</tr>
+</table>';
+    tableHtml += '<button id="clear-table">Clear Table</button>';
+    return tableHtml;
+}
+
+function addClearButtonListener() {
+    const clearButton = document.getElementById('clear-table');
+    if (clearButton) {
+        clearButton.addEventListener('click', function() {
+            const inputs = document.querySelectorAll('#input-table input');
+            inputs.forEach(input => input.value = '');
+        });
+    }
+}
+
 
 let currentCardIndex = 0;
 
@@ -81,6 +133,8 @@ document.getElementById('erase-btn').addEventListener('click', () => {
         cell.innerText = ''; // Clear the text in each cell
     });
 });
+
+
 
 displayCard(0).then(() => {
     document.getElementById('card-container').classList.add('show-card');
