@@ -78,15 +78,38 @@ function getTableHtml() {
     <th>Teachers</th>
     <th>Parents</th>
 </tr>
-<tr></tr>
-<tr></tr>
-<tr></tr>
-<tr></tr>
-<tr></tr>
-<tr></tr>
-<tr></tr>
-<tr></tr>
-<tr></tr>
+<tr>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+</tr>
+<tr>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+</tr>
+<tr>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+</tr>
+<tr>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+</tr>
+<tr>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+</tr>
+<tr>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+</tr>
+<tr>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+</tr>
+<tr>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+</tr>
 <tr>
     <td contenteditable="true"></td>
     <td contenteditable="true"></td>
@@ -104,8 +127,10 @@ function addClearButtonListener() {
     const clearButton = document.getElementById('clear-table');
     if (clearButton) {
         clearButton.addEventListener('click', function() {
-            const inputs = document.querySelectorAll('#input-table input');
-            inputs.forEach(input => input.value = '');
+            const cells = document.querySelectorAll('#input-table td[contenteditable="true"]');
+            cells.forEach(cell => {
+                cell.innerText = ''; // Clear the text in each cell
+            });
         });
     }
 }
