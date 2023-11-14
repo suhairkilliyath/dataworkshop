@@ -1,6 +1,6 @@
 #card-container {
     transition: opacity 0.5s ease-in-out;
-    opacity: 0; /* Start with an invisible card */
+    opacity: 1; /* Start with an invisible card */
 }
 
 /* When a new card is displayed, it fades in */
