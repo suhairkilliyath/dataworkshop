@@ -1,0 +1,165 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #f8f8f8;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e0e0e0;
+}
+
+.hero {
+    background: url('https://assets-global.website-files.com/6517e98d99cb2c22454a4663/65184e271add88a3c367164e_pic-p-500.png') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 5px solid #4CAF50;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.story-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.story-link {
+    display: block;
+    background: white;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.story-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.story-link img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.story-link span {
+    display: block;
+    padding: 10px;
+}
+
+.features {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 30%;
+}
+
+.feature-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.feature-card h3 {
+    margin-top: 15px;
+    font-size: 1.4rem;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+    .container {
+        width: 95%;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .story-links, .feature-cards {
+        flex-direction: column;
+    }
+
+    .feature-card {
+        width: 100%;
+    }
+}
