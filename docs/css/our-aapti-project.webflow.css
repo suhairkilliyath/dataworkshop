@@ -4112,7 +4112,7 @@ ul {
 .footer-subscribe-2 {
   background-color: #fbf7eb;
   border-bottom: 1px solid #e4ebf3;
-  padding: 50px 30px 40px;
+  padding: 0;
   position: relative;
 }
 
@@ -4227,13 +4227,18 @@ ul {
 }
 
 .footer-bottom-2 {
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   display: flex;
 }
 
 .footer-copyright-2 {
   color: #3a4554;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
 }
 
 .footer-legal-block-2 {
@@ -4485,6 +4490,22 @@ ul {
 
 .heading-9, .heading-10, .heading-11, .heading-12, .heading-13, .heading-14, .heading-15, .heading-16, .heading-17, .heading-18, .subscript-2, .heading-19 {
   font-size: 55px;
+}
+
+.html-embed-2 {
+  align-items: flex-start;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 400px;
+  display: flex;
+}
+
+.html-embed-3 {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 5px;
+  line-height: 36px;
+  display: flex;
 }
 
 @media screen and (min-width: 1440px) {
